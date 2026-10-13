@@ -4,7 +4,7 @@
  
 ## -68752d4 research: software, ai, mobile
 
-##- 0c93cbf research: networking, cybersecurity, data
+## - 0c93cbf research: networking, cybersecurity, data
 
  analysis: misconception and open question
 
