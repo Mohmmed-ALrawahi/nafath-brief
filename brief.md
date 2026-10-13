@@ -42,3 +42,10 @@ Oman’s Personal Data Protection Law (Royal Decree 6/2022) was amended by Royal
 
 Resource: Royal Decree 6/2022 Issuing the Personal Data Protection Law (Consolidated through Royal Decree 68/2026) - https://decree.om/2022/l20220006/
 
+## Misconception in My Track:
+
+A common misconception is that turning on DNS over HTTPS makes a user anonymous. RFC 8484 only protects the DNS exchange between the client and the selected resolver using HTTPS; it does not hide DNS queries from that resolver or prevent all other methods of tracking. Its Section 8, “Privacy Considerations,” discusses information observable on the wire and by the server, while Section 9, “Security Considerations,” explains that DoH transport security does not provide DNS-data integrity by itself. The correct design combines DoH with trusted resolver selection, sensible logging limits, HTTPS, and DNSSEC where appropriate.
+
+## Open Question:
+
+Which resolver can the authority approve for both mobile and web clients, and what logging, retention, DNSSEC-validation, and availability requirements will apply to it?
