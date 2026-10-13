@@ -4,13 +4,14 @@ My track: Networking
 
 ## Overview:
 
-NAFATH will give citizens one identity account for many government services through a mobile app and website. The authority must separate authentication, which confirms who signed in, from authorization, which defines what each connected service may access. It must secure network lookups, limit mobile permissions, and apply phishing-resistant sign-in. AI can help detect suspicious access, but only if risks such as bias, false alarms, privacy loss, and model drift are measured and managed. Data rules influence every layer: identity attributes, login telemetry, risk scores, retention, and sharing with service agencies. The project should therefore agree on standards, minimal data flows, user recovery, incident response, and legal responsibilities before launch, then test these controls in a pilot and monitor them continuously.
+Your single sign-on platform connects citizens to multiple government services through a mobile app and website using one identity account. To build a secure and lawful infrastructure, six key technical domains must work together. Software engineering and cybersecurity separate user authentication from service authorization while applying phishing-resistant multi-factor sign-in. Mobile development limits app permissions, while secure networking protects domain lookups. Artificial intelligence automatically monitors traffic patterns to detect suspicious access, provided risks like false alarms, bias, and privacy loss are properly managed. Finally, strict data management ensures full compliance with Oman privacy regulations across all personal record storage and sharing. The project must agree on standards, recovery plans, and legal responsibilities before testing these controls in a pilot and monitoring them continuously.
+
 
 ## Software:
 
-OAuth 2.0 is an authorization framework: it issues scoped access tokens so an app or service can call protected APIs without receiving a citizen’s password. OpenID Connect (OIDC) adds an identity layer over OAuth 2.0 and returns an ID Token that the client validates to confirm the signed-in user. Use OIDC for citizens’ login and OAuth 2.0 access tokens to limit each government service’s API permissions.
+OAuth 2.0 is an authorization framework designed for delegated access, allowing third-party applications to access server resources without sharing credentials. OpenID Connect builds on OAuth 2.0 by adding an identity layer, specifically providing an ID token for user authentication and login verification. For your single sign-on service, OpenID Connect authenticates citizen identities during login, while OAuth 2.0 manages authorized access to specific government backend APIs and user data resources securely.
 
-Resource: OpenID Connect Core 1.0 incorporating errata set 2 - https://openid.net/specs/openid-connect-core-1_0.html
+Resource: RFC 6749 - The OAuth 2.0 Authorization Framework - https://www.rfc-editor.org/rfc/rfc6749
 
 ## AI:
 
